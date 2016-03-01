@@ -1,0 +1,19 @@
+<h1>Posts#index</h1>
+<h2>Total Posts <%= @posts.count %></h2>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th></th>
+  </tr>
+  <tbody>
+<!-- <% @posts.each do |post| %>
+    <%= render :partial => "post", locals:{post: post} %>
+    <% end %> -->
+<!-- <%= render :partial => "post", collection: @posts %>  -->
+<%= render @posts %>
+
+  </tbody>
+</table>
