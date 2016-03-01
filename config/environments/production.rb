@@ -91,6 +91,6 @@ Rails.application.configure do
   # config.fog_directory  = 'itesm-blog-rails'                          # required
   # config.fog_public     = false                                        # optional, defaults to true
   # config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" } # optional, defaults to {}
-end
+
 
 end
