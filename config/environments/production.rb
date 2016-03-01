@@ -77,16 +77,20 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+
   CarrierWave.configure do |config|
-  config.fog_provider = 'fog/aws'                        # required
-  config.fog_credentials = {
-    provider:              'AWS',                        # required
-    aws_access_key_id:     'AKIAJSCEB4',                        # required
-    aws_secret_access_key: 'yyy',                        # required
-  }
-  config.fog_directory  = 'itesm-blog-rails'                          # required
-  config.fog_public     = false                                        # optional, defaults to true
-  config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" } # optional, defaults to {}
+    config.storage :file
+  end
+  # CarrierWave.configure do |config|
+  # config.fog_provider = 'fog/aws'                        # required
+  # config.fog_credentials = {
+  #   provider:              'AWS',                        # required
+  #   aws_access_key_id:     'AKIAJSCEB4',                        # required
+  #   aws_secret_access_key: 'yyy',                        # required
+  # }
+  # config.fog_directory  = 'itesm-blog-rails'                          # required
+  # config.fog_public     = false                                        # optional, defaults to true
+  # config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" } # optional, defaults to {}
 end
 
 end
